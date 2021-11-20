@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -104,5 +105,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         dbHelper.close(); // закрываем соединение с БД
     }
+
+    public void onClickGo(View view) {
+        Intent intent = new Intent(this, MainActivity2.class);
+        startActivity(intent);
     }
+}
 
